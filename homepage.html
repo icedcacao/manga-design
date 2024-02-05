@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              lightBlack: "#424242",
+              darkBlack: "#2c2c2c",
+              offWhite: "#faf9f6",
+              lightGreen: "#5dd6a1",
+              lightRed: "#ec7373",
+              lightBlue: "#99dde7",
+              lightYellow: "#eed263",
+              lightOrange: "#d65d41",
+              lighterOrange: "#e5674a",
+              lightGray: "#606060",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* clears the ‘X’ from Internet Explorer */
+      input[type="search"]::-ms-clear {
+        display: none;
+        width: 0;
+        height: 0;
+      }
+      input[type="search"]::-ms-reveal {
+        display: none;
+        width: 0;
+        height: 0;
+      }
+      /* clears the ‘X’ from Chrome */
+      input[type="search"]::-webkit-search-decoration,
+      input[type="search"]::-webkit-search-cancel-button,
+      input[type="search"]::-webkit-search-results-button,
+      input[type="search"]::-webkit-search-results-decoration {
+        display: none;
+      }
+    </style>
+    <title>Homepage</title>
+  </head>
+  <!-- Putting bg-lightBlack only for testing -->
+  <body class="bg-lightBlack">
+    <div class="font-sans text-offWhite">
+      <!-- Navigation Bar -->
+      <header
+        class="sticky top-0 z-40 flex-none w-full mx-auto border-b bg-darkBlack border-lightGray"
+      >
+        <div
+          class="flex items-center justify-between w-full px-3 py-3 mx-auto max-w-screen-2xl lg:px-4"
+        >
+          <div class="flex items-center">
+            <button
+              class="p-1.5 mr-4 rounded cursor-pointer bg-lightGray hover:ring-1 hover:ring-lighterOrange lg:hidden focus:ring-2 focus:ring-lighterOrange"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.75 6.75H20.25M3.75 12H12M3.75 17.25H20.25"
+                  stroke="#faf9f6"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <div class="flex items-center justify-between -translate-x-1">
+              <a href="#" class="flex items-center">
+                <img src="/static/images/logo.svg" class="h-14" alt="logo" />
+                <img
+                  src="/static/images//logo-text.svg"
+                  class="hidden h-12 lg:flex"
+                  alt="logo-text"
+                />
+              </a>
+            </div>
+            <button
+              class="hidden pl-4 pr-3.5 py-1.5 ml-6 border-2 lg:flex xl:ml-20 lg:rounded"
+            >
+              <span class="mr-2 text-xl leading-none">Category</span>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19.5 8.25L12 15.75L4.5 8.25"
+                  stroke="#faf9f6"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <button
+              class="hidden pl-4 pr-3.5 py-1.5 ml-6 border-2 lg:flex lg:rounded"
+            >
+              <span class="mr-2 text-xl leading-none">Filter</span>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.0001 3C14.7548 3 17.4552 3.23205 20.0831 3.67767C20.6159 3.76803 21 4.23355 21 4.77402V5.81802C21 6.41476 20.7629 6.98705 20.341 7.40901L14.909 12.841C14.4871 13.2629 14.25 13.8352 14.25 14.432V17.3594C14.25 18.2117 13.7685 18.9908 13.0062 19.3719L9.75 21V14.432C9.75 13.8352 9.51295 13.2629 9.09099 12.841L3.65901 7.40901C3.23705 6.98705 3 6.41476 3 5.81802V4.77404C3 4.23357 3.38408 3.76805 3.91694 3.67769C6.54479 3.23206 9.24533 3 12.0001 3Z"
+                  stroke="#faf9f6"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="hidden lg:flex lg:items-center lg:space-x-4">
+            <div class="relative">
+              <input
+                type="search"
+                class="block w-96 py-1.5 pl-3.5 text-xl bg-lightGray pe-10 rounded focus:outline-none focus:ring-2 focus:ring-lighterOrange"
+                placeholder="Search"
+              />
+              <div
+                class="absolute inset-y-0 flex items-center pointer-events-none end-0 pe-2"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21 21L15.8033 15.8033M15.8033 15.8033C17.1605 14.4461 18 12.5711 18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18C12.5711 18 14.4461 17.1605 15.8033 15.8033Z"
+                    stroke="#faf9f6"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+            <button class="cursor-pointer">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.7519 15.0021C20.597 15.484 19.3296 15.7501 18 15.7501C12.6152 15.7501 8.25 11.3849 8.25 6.00011C8.25 4.67052 8.51614 3.40308 8.99806 2.24817C5.47566 3.71798 3 7.19493 3 11.2501C3 16.6349 7.36522 21.0001 12.75 21.0001C16.8052 21.0001 20.2821 18.5245 21.7519 15.0021Z"
+                  stroke="#faf9f6"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <button class="cursor-pointer">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.5 3.75V16.5L12 14.25L7.5 16.5V3.75M16.5 3.75H18C19.2426 3.75 20.25 4.75736 20.25 6V18C20.25 19.2426 19.2426 20.25 18 20.25H6C4.75736 20.25 3.75 19.2426 3.75 18V6C3.75 4.75736 4.75736 3.75 6 3.75H7.5M16.5 3.75H7.5"
+                  stroke="#faf9f6"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <button class="cursor-pointer">
+              <svg
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.9815 18.7248C16.6121 16.9175 14.4424 15.75 12 15.75C9.55761 15.75 7.38789 16.9175 6.01846 18.7248M17.9815 18.7248C19.8335 17.0763 21 14.6744 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 14.6744 4.1665 17.0763 6.01846 18.7248M17.9815 18.7248C16.3915 20.1401 14.2962 21 12 21C9.70383 21 7.60851 20.1401 6.01846 18.7248M15 9.75C15 11.4069 13.6569 12.75 12 12.75C10.3431 12.75 9 11.4069 9 9.75C9 8.09315 10.3431 6.75 12 6.75C13.6569 6.75 15 8.09315 15 9.75Z"
+                  stroke="#faf9f6"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="flex lg:hidden">
+            <button
+              class="p-1.5 rounded cursor-pointer bg-lightGray hover:ring-1 hover:ring-lighterOrange lg:hidden focus:ring-2 focus:ring-lighterOrange"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21 21L15.8033 15.8033M15.8033 15.8033C17.1605 14.4461 18 12.5711 18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18C12.5711 18 14.4461 17.1605 15.8033 15.8033Z"
+                  stroke="#faf9f6"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </header>
+      <!-- Body -->
+      <div
+        class="w-full px-3 mx-auto my-6 space-y-4 lg:px-4 max-w-screen-2xl lg:my-8"
+      >
+        <h1 class="text-3xl lg:text-4xl">Popular title</h1>
+        <div
+          class="grid w-full grid-cols-12 p-4 rounded lg:rounded-md lg:p-8 bg-darkBlack"
+        >
+          <div class="w-full col-span-4 lg:col-span-3">
+            <img
+              class="w-full rounded lg:rounded-md"
+              src="/static/images/manga-sample.png"
+              alt="manga"
+            />
+          </div>
+          <div class="w-full h-full col-span-8 lg:col-span-9">
+            <div
+              class="flex flex-col justify-between h-full px-4 py-2 lg:px-12 lg:py-4"
+            >
+              <div class="space-y-1 lg:space-y-4">
+                <h2 class="text-xl lg:text-5xl">Blue Period</h2>
+                <div class="flex flex-wrap gap-1">
+                  <a
+                    href="#"
+                    class="px-1.5 leading-none text-sm rounded lg:text-base bg-lightGray"
+                  >
+                    Action
+                  </a>
+                </div>
+                <p class="hidden lg:flex">
+                  Yatora is the perfect high school student, with good grades
+                  and lots of friends. It’s an effortless performance, and,
+                  ultimately a dull one. But he wanders into the art room one
+                  day, and a lone painting captures his eye, awakening him to a
+                  kind of beauty he never knew. Compelled and consumed, he dives
+                  in headfirst and he’s about to learn how savage and
+                  unforgiving art can be.
+                </p>
+                <div
+                  class="flex flex-col text-sm sm:flex-row sm:space-x-4 lg:text-xl"
+                >
+                  <h2 class="font-bold">Latest Chapter</h2>
+                  <a class="text-lightOrange" href="#">Chapter 57</a>
+                </div>
+              </div>
+              <div>
+                <button
+                  class="lg:px-6 lg:py-1.5 px-2 py-1 lg:text-base font-semibold text-sm rounded-md bg-lighterOrange hover:bg-lightOrange"
+                >
+                  Reading chapter 1
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Content -->
+      <div class="w-full px-3 mx-auto my-6 lg:px-4 max-w-screen-2xl lg:my-8">
+        <div class="gap-8 lg:grid lg:grid-cols-12">
+          <div class="flex flex-col space-y-4 lg:col-span-9">
+            <h1 class="text-3xl lg:text-4xl">Latest updated</h1>
+            <div
+              class="grid w-full grid-cols-2 gap-4 p-4 rounded sm:grid-cols-3 lg:gap-8 lg:p-8 lg:grid-cols-4 bg-darkBlack"
+            >
+              <div class="flex flex-col space-y-0 lg:space-y-2">
+                <img src="/static/images/manga-sample.png" alt="" />
+                <h2 class="text-base truncate sm:text-xl">Blue Period</h2>
+                <div
+                  class="flex flex-col justify-between w-full text-sm sm:text-base sm:flex-row"
+                >
+                  <a href="#">Chapter 139</a>
+                  <h3 class="text-lightGreen">Finished</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col mt-6 space-y-4 lg:my-0 lg:col-span-3">
+            <h1 class="text-3xl lg:text-4xl">History</h1>
+            <div class="grid w-full grid-cols-4 p-4 rounded bg-darkBlack"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
